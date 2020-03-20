@@ -98,7 +98,10 @@ namespace Ahorcado {
                 foreach (Button button in pressedButtons)
                 {
                     button.Visible = true;
-                    pressedButtons.Remove(button);
+                }
+                for (int i = 0; i < pressedButtons.Count; i++)
+                {
+                    pressedButtons.RemoveAt(i);
                 }
 
                 pictureBox1.Image = Properties.Resources.ahorcado_0;
